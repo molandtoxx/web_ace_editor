@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="Assets Backend" inherit_id="web.assets_backend">
+            <group>
+                <field name="mirror" widget="codemirror" mode="xml" theme="monokai" addons="{'hint:xml': {'hintOptions': {'schemaInfo': instance.builder.codemirror.hint.schema.odoo} }, 'scroll': true, 'display:fullscreen': true}" />
+                <field name="mirror" widget="ace" style="height:300px" mode="python" theme="tomorrow" options="{'enableBasicAutocompletion': true,'enableSnippets': true,'enableLiveAutocompletion': false}" addons="['ace/ext/language_tools']"/>
+            </group>
+            <!--<field name="mirror" widget="codemirror" mode="xml" theme="monokai" addons="{'hint:xml': {'hintOptions': {'schemaInfo': {} }}, 'scroll': true, 'display:fullscreen': true}" />-->
+            <!--<field name="mirror" widget="codemirror" options="{'editor': {'mode': 'xml', 'theme': 'monokai'}}" bind="{'theme': 'installed_version'}" addons="{'hint:xml': {demo: 1}, 'scroll': true, 'display:fullscreen': true}" />-->
+        </template>
+
+
+    </data>
+</openerp>

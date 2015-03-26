@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="AceFormWidget">
+        <pre class="oe_form_field oe_form_field_ace" t-att-style="widget.node.attrs.style"/>
+    </t>
+</templates>
