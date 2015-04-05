@@ -109,7 +109,12 @@
                 if (show_value === '') {
                     this.$el.css('height', parseInt(this.default_height, 10)+"px");
                 }
-                this.$el.text(show_value);
+                if (this.editor){
+                    //self.editor.destroy();
+                    this.editor.setValue(show_value, -1)
+                }else{
+                    this.$el.text(show_value);
+                }
                 if (! this.auto_sized) {
                     this.auto_sized = true;
                     this.$el.autosize();
@@ -119,7 +124,12 @@
                 this.create_editor();
             } else {
                 var txt = this.get("value") || '';
-                this.$el.text(txt);
+                 if (this.editor){
+                    //self.editor.destroy();
+                    this.editor.setValue(txt, -1)
+                }else{
+                    this.$el.text(txt);
+                }
                 this.create_highlighter();
             }
         },
